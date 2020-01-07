@@ -1,10 +1,9 @@
-package com.github.nkolytschew.userservicems.web.rest;
+package com.github.nkolytschew.userservice.web.rest;
 
 
-import com.github.nkolytschew.userservicems.service.ExampleService;
-import com.github.nkolytschew.userservicems.web.model.ResponseModel;
+import com.github.nkolytschew.userservice.service.ExampleService;
+import com.github.nkolytschew.userservice.web.model.ResponseModel;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,4 +1,4 @@
-package com.github.nkolytschew.userservicems.a2.mysql.web.model;
+package com.github.nkolytschew.userservice.a2.mysql.web.model;
 
 public class AddressModel {
 

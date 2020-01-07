@@ -1,8 +1,8 @@
-package com.github.nkolytschew.userservicems.a2.mysql.web.rest;
+package com.github.nkolytschew.userservice.a2.mysql.web.rest;
 
 
-import com.github.nkolytschew.userservicems.a2.mysql.service.UserService;
-import com.github.nkolytschew.userservicems.a2.mysql.web.model.UserModel;
+import com.github.nkolytschew.userservice.a2.mysql.service.UserService;
+import com.github.nkolytschew.userservice.a2.mysql.web.model.UserModel;
 import org.springframework.context.annotation.Profile;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

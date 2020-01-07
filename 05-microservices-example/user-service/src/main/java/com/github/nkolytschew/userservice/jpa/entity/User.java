@@ -1,4 +1,4 @@
-package com.github.nkolytschew.userservicems.jpa.entity;
+package com.github.nkolytschew.userservice.jpa.entity;
 
 
 import javax.persistence.*;

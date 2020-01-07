@@ -25,8 +25,12 @@ public class RatingServiceImpl implements RatingService {
     }
 
     @Override
-    public RatingModel createRating(RatingModel model) {
-        return null;
+    public void createRating(RatingModel model) {
+        final RatingDocument doc = new RatingDocument();
+        doc.setComment(model.getComment());
+        doc.setRating(model.getRating());
+        doc.setUserId(model.getUserId());
+        this.repository.save(doc);
     }
 
     @Override

@@ -3,10 +3,7 @@ package com.github.nkolytschew.ratingservice.web.rest;
 
 import com.github.nkolytschew.ratingservice.service.RatingService;
 import com.github.nkolytschew.ratingservice.web.model.RatingModel;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 
 @RestController
@@ -21,6 +18,13 @@ public class RatingController {
     @GetMapping("rating/{userId}")
     public RatingModel findRatingByUserId(@PathVariable String userId) {
         return this.service.findRatingsByUserId(userId);
+    }
+
+    @PostMapping("rating}")
+    public String createRating(@RequestBody RatingModel model) {
+        this.service.createRating(model);
+
+        return "200 - OK";
     }
 
     @DeleteMapping("rating/{id}")

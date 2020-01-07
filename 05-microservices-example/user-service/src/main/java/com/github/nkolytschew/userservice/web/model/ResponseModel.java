@@ -1,4 +1,4 @@
-package com.github.nkolytschew.userservicems.web.model;
+package com.github.nkolytschew.userservice.web.model;
 
 public class ResponseModel {
     private String message;

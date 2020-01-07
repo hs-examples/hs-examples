@@ -1,4 +1,4 @@
-package com.github.nkolytschew.userservicems.a2.mysql.service;
+package com.github.nkolytschew.userservice.a2.mysql.service;
 
 public interface MappingService<T, U> {
 

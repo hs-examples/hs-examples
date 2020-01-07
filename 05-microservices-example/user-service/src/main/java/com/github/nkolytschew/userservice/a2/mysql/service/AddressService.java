@@ -1,7 +1,7 @@
-package com.github.nkolytschew.userservicems.a2.mysql.service;
+package com.github.nkolytschew.userservice.a2.mysql.service;
 
 
-import com.github.nkolytschew.userservicems.a2.mysql.web.model.AddressModel;
+import com.github.nkolytschew.userservice.a2.mysql.web.model.AddressModel;
 
 public interface AddressService {
 

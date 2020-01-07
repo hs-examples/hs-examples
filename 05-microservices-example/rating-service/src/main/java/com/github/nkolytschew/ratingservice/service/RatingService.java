@@ -6,7 +6,7 @@ public interface RatingService {
 
     RatingModel findRatingsByUserId(String userId);
 
-    RatingModel createRating(RatingModel model);
+    void createRating(RatingModel model);
 
     RatingModel deleteRatingById(Long ratingId);
 }

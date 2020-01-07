@@ -1,4 +1,4 @@
-package com.github.nkolytschew.userservicems.service;
+package com.github.nkolytschew.userservice.service;
 
 public interface ExampleService {
     String randomServiceCall();

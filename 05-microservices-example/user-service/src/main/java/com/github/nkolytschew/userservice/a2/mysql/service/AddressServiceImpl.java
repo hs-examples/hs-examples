@@ -1,8 +1,8 @@
-package com.github.nkolytschew.userservicems.a2.mysql.service;
+package com.github.nkolytschew.userservice.a2.mysql.service;
 
-import com.github.nkolytschew.userservicems.a2.mysql.jpa.repository.AddressRepository;
-import com.github.nkolytschew.userservicems.a2.mysql.web.model.AddressModel;
-import com.github.nkolytschew.userservicems.jpa.entity.Address;
+import com.github.nkolytschew.userservice.a2.mysql.jpa.repository.AddressRepository;
+import com.github.nkolytschew.userservice.a2.mysql.web.model.AddressModel;
+import com.github.nkolytschew.userservice.jpa.entity.Address;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
