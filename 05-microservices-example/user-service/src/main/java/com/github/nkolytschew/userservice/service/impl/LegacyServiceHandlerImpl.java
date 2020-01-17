@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.Map;
 
 @Service
 public class LegacyServiceHandlerImpl implements LegacyServiceHandler {
@@ -27,9 +28,9 @@ public class LegacyServiceHandlerImpl implements LegacyServiceHandler {
      * In this case we don't ne a response, so we set response type to null.
      */
     @Override
-    public void sendRequest(Long id, String requestBodyAsJson) {
+    public void sendRequest(Long id, Map<String, Object> requestBodyAsJson) {
         final String requestUrl = this.url + "api/v1/shelter/" + id;
-        this.template.postForObject(requestUrl, requestBodyAsJson, null);
+        this.template.postForObject(requestUrl, requestBodyAsJson, Void.class);
     }
 
     /**

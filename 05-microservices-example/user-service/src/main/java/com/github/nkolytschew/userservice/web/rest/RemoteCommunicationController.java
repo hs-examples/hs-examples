@@ -31,7 +31,7 @@ public class RemoteCommunicationController {
     }
 
     @PostMapping("/legacy/{id}")
-    public String createAnimalShelterRequest(@PathVariable Long id, @RequestBody String body) {
+    public String createAnimalShelterRequest(@PathVariable Long id, @RequestBody Map<String, Object> body) {
         this.legacyServiceHandler.sendRequest(id, body);
 
         return "200 - OK";
