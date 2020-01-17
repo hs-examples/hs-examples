@@ -8,7 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class RatingDocument {
 
     @Id
-    private Long id;
+    private String id;
 
     private String userId;
     private String comment;
@@ -17,11 +17,11 @@ public class RatingDocument {
     public RatingDocument() {
     }
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
