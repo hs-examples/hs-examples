@@ -17,7 +17,7 @@ public class ComController {
         return "200 - OK";
     }
 
-    @PostMapping("shelter/{id]")
+    @PostMapping("shelter/{id}")
     public String sendRequestToAnimalShelter(@PathVariable Long id,
                                              @RequestBody ComModel model) {
         return "200 - OK";
