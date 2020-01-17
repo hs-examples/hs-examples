@@ -5,6 +5,7 @@ import com.github.nkolytschew.ratingservice.service.RatingService;
 import com.github.nkolytschew.ratingservice.web.model.RatingModel;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 
 @RestController
 public class RatingController {
@@ -16,11 +17,11 @@ public class RatingController {
     }
 
     @GetMapping("rating/{userId}")
-    public RatingModel findRatingByUserId(@PathVariable String userId) {
+    public List<RatingModel> findRatingByUserId(@PathVariable String userId) {
         return this.service.findRatingsByUserId(userId);
     }
 
-    @PostMapping("rating}")
+    @PostMapping("rating")
     public String createRating(@RequestBody RatingModel model) {
         this.service.createRating(model);
 
@@ -29,6 +30,6 @@ public class RatingController {
 
     @DeleteMapping("rating/{id}")
     public RatingModel deleteRatingById(@PathVariable Long id) {
-        return this.service.deleteRatingById(id);
+        return this.service.deleteRatingById(id.toString());
     }
 }

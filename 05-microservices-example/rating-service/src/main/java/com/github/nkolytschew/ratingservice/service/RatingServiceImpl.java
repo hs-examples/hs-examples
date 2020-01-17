@@ -5,6 +5,10 @@ import com.github.nkolytschew.ratingservice.mongodb.repository.RatingRepository;
 import com.github.nkolytschew.ratingservice.web.model.RatingModel;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 @Service
 public class RatingServiceImpl implements RatingService {
     private final RatingRepository repository;
@@ -14,14 +18,18 @@ public class RatingServiceImpl implements RatingService {
     }
 
     @Override
-    public RatingModel findRatingsByUserId(String userId) {
-        final RatingDocument doc = repository.findByUserId(userId);
-        final RatingModel model = new RatingModel();
-        model.setComment(doc.getComment());
-        model.setRating(doc.getRating());
-        model.setUserId(doc.getUserId());
+    public List<RatingModel> findRatingsByUserId(String userId) {
+        final List<RatingModel> ratingModelList = new ArrayList<>();
+        repository.findByUserId(userId).forEach(doc -> {
+            final RatingModel model = new RatingModel();
+            model.setComment(doc.getComment());
+            model.setRating(doc.getRating());
+            model.setUserId(doc.getUserId());
 
-        return model;
+            ratingModelList.add(model);
+        });
+
+        return ratingModelList;
     }
 
     @Override
@@ -34,7 +42,7 @@ public class RatingServiceImpl implements RatingService {
     }
 
     @Override
-    public RatingModel deleteRatingById(Long id) {
+    public RatingModel deleteRatingById(String id) {
         final RatingModel model = new RatingModel();
         repository.findById(id).ifPresent(doc -> {
             model.setComment(doc.getComment());
