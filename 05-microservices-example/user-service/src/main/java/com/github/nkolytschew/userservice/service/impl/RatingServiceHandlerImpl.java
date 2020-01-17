@@ -45,7 +45,7 @@ public class RatingServiceHandlerImpl implements RatingServiceHandler {
     }
 
     @Override
-    public String deleteRatingById(Long id) {
+    public String deleteRatingById(String id) {
         final String requestUrl = this.url + "rating/" + id;
         final ResponseEntity<String> response = this.template.exchange(requestUrl, HttpMethod.DELETE, null, String.class);
 

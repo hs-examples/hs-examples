@@ -43,7 +43,7 @@ public class RemoteCommunicationController {
     }
 
     @DeleteMapping("/rating/{id}")
-    public String deleteRating(@PathVariable Long id) {
+    public String deleteRating(@PathVariable String id) {
         return this.ratingServiceHandler.deleteRatingById(id);
     }
 

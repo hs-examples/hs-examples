@@ -29,7 +29,7 @@ public class RatingController {
     }
 
     @DeleteMapping("rating/{id}")
-    public RatingModel deleteRatingById(@PathVariable Long id) {
-        return this.service.deleteRatingById(id.toString());
+    public RatingModel deleteRatingById(@PathVariable String id) {
+        return this.service.deleteRatingById(id);
     }
 }

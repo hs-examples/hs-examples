@@ -8,5 +8,5 @@ public interface RatingServiceHandler {
 
     String createNewRating(Map<String, Object> ratingAsJson);
 
-    String deleteRatingById(Long id);
+    String deleteRatingById(String id);
 }
