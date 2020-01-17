@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.net.URI;
+import java.util.Map;
 
 
 @Service
@@ -36,7 +37,7 @@ public class RatingServiceHandlerImpl implements RatingServiceHandler {
     }
 
     @Override
-    public String createNewRating(String ratingAsJson) {
+    public String createNewRating(Map<String, Object> ratingAsJson) {
         final String requestUrl = this.url + "rating/";
         final ResponseEntity<String> response = this.template.postForEntity(requestUrl, ratingAsJson, String.class);
 

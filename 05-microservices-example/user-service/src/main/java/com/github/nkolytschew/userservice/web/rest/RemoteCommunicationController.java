@@ -38,7 +38,7 @@ public class RemoteCommunicationController {
     }
 
     @PostMapping("/rating")
-    public String createRating(@RequestBody String body) {
+    public String createRating(@RequestBody Map<String, Object> body) {
         return this.ratingServiceHandler.createNewRating(body);
     }
 
